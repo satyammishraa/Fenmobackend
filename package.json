@@ -12,7 +12,11 @@
     "dev": "nodemon src/app.js"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.3.1",
     "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.2.1",
     "uuid": "^13.0.0"
   },
   "repository": {
@@ -23,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/satyammishraa/Fenmobackend/issues"
   },
-  "homepage": "https://github.com/satyammishraa/Fenmobackend#readme"
+  "homepage": "https://github.com/satyammishraa/Fenmobackend#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
 }

@@ -65,3 +65,21 @@ exports.getExpenses = async (req, res) => {
         res.status(500).json({ message: "Error fetching expenses" });
     }
 };
+
+exports.deleteExpense = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const deleted = await Expense.findByIdAndDelete(id);
+
+    if (!deleted) {
+      return res.status(404).json({ message: "Expense not found" });
+    }
+
+    res.json({ message: "Expense deleted successfully" });
+
+  } catch (error) {
+    res.status(500).json({ message: "Error deleting expense" });
+  }
+};
+
